@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// Importa el archivo donde está definido AppDrawer
+import 'menu_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -11,6 +13,10 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Perfil'),
         backgroundColor: const Color(0xFF4CAF50),
+      ),
+      drawer: AppDrawer(
+        currentRoute: '/profile',
+        userData: userData,
       ),
       body: SafeArea(
         child: Padding(

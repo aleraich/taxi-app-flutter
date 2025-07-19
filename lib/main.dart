@@ -3,7 +3,9 @@ import 'login_screen.dart';
 import 'register_screen.dart';
 import 'menu_screen.dart';
 import 'profile_screen.dart';
-import 'taxi_request_screen.dart';
+// Usamos alias para evitar conflicto de nombres
+import 'taxi_request_screen.dart' as taxi;
+
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => const RegisterScreen(),
         '/menu': (context) => const MenuScreen(),
         '/profile': (context) => const ProfileScreen(),
-        '/taxi-request': (context) => const TaxiRequestScreen(),
+        '/taxi-request': (context) => const taxi.TaxiRequestScreen(),
       },
     );
   }
